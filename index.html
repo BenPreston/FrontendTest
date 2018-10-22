@@ -1,11 +1,49 @@
 <!DOCTYPE html>
 <html>
+
 <head lang="en">
     <meta charset="UTF-8">
-    <title>Hello!</title>
+    <title>Merfeel Test</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
+
 <body>
 
-<h1>Hello!</h1>
+    <div class="mainContainer">
+
+        <!--        <div class="wrap">-->
+        <div class="search">
+            <input type="text" id="username" placeholder="Search username...">
+            <button class="searchButton" type="button" onclick="findUser()">Submit</button>
+        </div>
+
+        <div id="gitUserDiv" class="gitHubUserInfo hidden">
+
+            <div id="gitHubPicture"></div>
+
+            <div class="gitGroupedText">
+                <div id="gitHubUsername"></div>
+                <div id="gitHubName"></div>
+                <div id="gitHubBio"></div>
+            </div>
+
+        </div>
+        
+        <div id="noUserExists" class="hidden">
+         Does not exist
+        </div>
+        
+        <div id="repoTableDiv" class="hidden">
+            <div id="repTitle">Repositories</div>
+            <table id="repositoryInfo">
+                        </table>
+                 </div>
+
+    </div>
+
+    <!--    </div>-->
+
+    <script src="main.js"></script>
 </body>
+
 </html>

@@ -1,0 +1,93 @@
+body {
+    background-color: lightgray;
+}
+
+.mainContainer {
+    display: inline-flex;
+    flex-direction: column;
+
+    padding: 20px;
+    border: solid;
+    background-color: white;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.gitPic {
+    height: 120px;
+}
+
+.search {
+    align-self: flex-start;
+}
+
+#username {
+    font-size: 1.2em;
+    margin: 10px
+}
+
+.searchButton {
+    font-size: 1.2em
+}
+
+#noUserExists {
+    background-color: #ffb2b2;
+    padding: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.gitHubUserInfo {
+    display: flex;
+    border: 10px;
+    padding: 10px;
+}
+
+.gitGroupedText {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+#gitHubUsername {
+    font-style: italic;
+    font-size: 1em;
+}
+
+#gitHubName {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+#gitHubBio {
+    font-size: 1em;
+}
+
+.hidden {
+    display: none;
+}
+
+#repTitle {
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 10px;
+    border-bottom: solid black;
+}
+
+#repositoryInfo {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+table, th, td {
+      font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    border-bottom: solid black;
+    padding: 10px;
+}
+
+.gitIcons {
+    height: 15px;
+}
