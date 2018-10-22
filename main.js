@@ -123,3 +123,5 @@ function showRepos() {
 }
 
 document.getElementById("myBtn").addEventListener("click", findUser);
+
+document.getElementById("username").addEventListener("keyup", findUser);
