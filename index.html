@@ -8,10 +8,9 @@
 </head>
 
 <body>
-
+    <div class="centerDiv">
     <div class="mainContainer">
 
-        <!--        <div class="wrap">-->
         <div class="search">
             <input type="text" id="username" placeholder="Search username...">
             <button class="searchButton" type="button" onclick="findUser()">Submit</button>
@@ -28,21 +27,20 @@
             </div>
 
         </div>
-        
+
         <div id="noUserExists" class="hidden">
-         Does not exist
+            Does not exist
         </div>
-        
+
         <div id="repoTableDiv" class="hidden">
             <div id="repTitle">Repositories</div>
-            <table id="repositoryInfo">
-                        </table>
-                 </div>
+            <table>
+                <tbody id="repositoryInfo"></tbody>
+            </table>
+        </div>
 
     </div>
-
-    <!--    </div>-->
-
+</div>
     <script src="main.js"></script>
 </body>
 

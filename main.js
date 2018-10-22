@@ -6,6 +6,8 @@ var data;
 
 function findUser() {
 
+    document.getElementById("repositoryInfo").innerHTML = "";
+    
     let name = document.getElementById("username").value;
     let gitHubLink = "https://api.github.com/users/" + name;
 
@@ -28,7 +30,7 @@ function findUser() {
 
         document.getElementById("gitHubPicture").innerHTML = "<img class=\"gitPic\" src=" + data.avatar_url + ">";
 
-        document.getElementById("gitHubUsername").innerHTML = data.login;
+        document.getElementById("gitHubUsername").innerHTML = "@" + data.login;
 
         document.getElementById("gitHubName").innerHTML = data.name;
 
@@ -60,8 +62,8 @@ function findUser() {
 
 function showRepos() {
 
-     document.getElementById("repoTableDiv").classList.remove("hidden");
-    
+    document.getElementById("repoTableDiv").classList.remove("hidden");
+
     var repoTable = document.getElementById("repositoryInfo");
 
     let name = document.getElementById("username").value;
@@ -84,19 +86,37 @@ function showRepos() {
 
             var tableRows = document.createElement("tr");
             var repoName = document.createElement("td");
+            var gitStar = document.createElement("td");
+            var gitFork = document.createElement("td");
             var repoForks = document.createElement("td");
             var repoStars = document.createElement("td");
 
             repoTable.appendChild(tableRows);
             tableRows.appendChild(repoName);
-            tableRows.appendChild(repoForks);
+            tableRows.appendChild(gitStar);
             tableRows.appendChild(repoStars);
+            tableRows.appendChild(gitFork);
+            tableRows.appendChild(repoForks);
 
-            repoName.innerHTML = repoData[i].name;
-            repoStars.innerHTML = "<img class=\"gitIcons\" src=\"gitHubForkIcon.png\">" + " " + repoData[i].stargazers_count;
-                
-                repoForks.innerHTML = "<img class=\"gitIcons\" src=\"star.png\">" + " " + repoData[i].forks_count;
-          }
+
+            repoName.textContent = repoData[i].name;
+
+            var forkImage = document.createElement("img");
+            forkImage.setAttribute("src", "gitHubForkIcon.png");
+            forkImage.setAttribute("class", "gitIcons");
+
+gitFork.appendChild(forkImage);
+
+            var starImage = document.createElement("img");
+            starImage.setAttribute("src", "star.png");
+            starImage.setAttribute("class", "gitIcons");
+
+            gitStar.appendChild(starImage);
+
+            repoStars.textContent = repoData[i].stargazers_count;
+
+            repoForks.textContent = repoData[i].forks_count;
+        }
 
     }).catch(function (error) {
         //called when there's an error
