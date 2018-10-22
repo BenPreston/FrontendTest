@@ -1,13 +1,9 @@
 var data;
 
-//let pickUser = "benpreston";
-//
-//callUser(pickUser);
-
 function findUser() {
 
     document.getElementById("repositoryInfo").innerHTML = "";
-    
+
     let name = document.getElementById("username").value;
     let gitHubLink = "https://api.github.com/users/" + name;
 
@@ -105,7 +101,7 @@ function showRepos() {
             forkImage.setAttribute("src", "gitHubForkIcon.png");
             forkImage.setAttribute("class", "gitIcons");
 
-gitFork.appendChild(forkImage);
+            gitFork.appendChild(forkImage);
 
             var starImage = document.createElement("img");
             starImage.setAttribute("src", "star.png");
@@ -125,3 +121,5 @@ gitFork.appendChild(forkImage);
     });
 
 }
+
+document.getElementById("myBtn").addEventListener("click", findUser);
