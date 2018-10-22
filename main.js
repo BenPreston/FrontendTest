@@ -124,4 +124,8 @@ function showRepos() {
 
 document.getElementById("myBtn").addEventListener("click", findUser);
 
-document.getElementById("username").addEventListener("keyup", findUser);
+document.getElementById("username").addEventListener("keyup", function(e) {
+    if (e.keyCode === 13) {
+        findUser();
+    }
+});
